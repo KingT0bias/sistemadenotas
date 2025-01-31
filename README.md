@@ -25,4 +25,3 @@ Caso ainda não tenha o código, clone o repositório com:
 ```sh
 git clone https://github.com/seu-usuario/sistema-de-notas.git
 cd sistema-de-notas
-GITHUB: https://github.com/KingT0bias/sistemadenotas/tree/main
