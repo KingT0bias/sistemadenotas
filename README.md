@@ -13,8 +13,8 @@ Este é um sistema simples de gerenciamento de notas e presenças de alunos, des
 #  *Pré-requisitos*
 Antes de rodar o projeto, certifique-se de ter instalado:
  
-- [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - Um editor de código como [Visual Studio](https://visualstudio.microsoft.com/) ou [VS Code](https://code.visualstudio.com/)
+-[.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 - Git instalado (opcional)
  
 ---
