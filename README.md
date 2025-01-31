@@ -15,7 +15,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
  
 - Um editor de código como [Visual Studio](https://visualstudio.microsoft.com/) ou [VS Code](https://code.visualstudio.com/)
 
--[.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 
 - Git instalado (opcional)
  
