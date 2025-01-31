@@ -19,7 +19,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
  
 ---
  
-#  1. Clonar o Repositório**
+#  1. Clonar o Repositório
 Caso ainda não tenha o código, clone o repositório com:
  
 ```sh
