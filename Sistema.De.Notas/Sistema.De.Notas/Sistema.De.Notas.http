@@ -1,6 +1,0 @@
-@Sistema.De.Notas_HostAddress = http://localhost:5194
-
-GET {{Sistema.De.Notas_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

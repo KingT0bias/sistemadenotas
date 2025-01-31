@@ -1,0 +1,67 @@
+﻿@model IEnumerable<SistemaDeNotas.Data.NotaAluno>
+
+@{
+    ViewData["Title"] = "Lista de Notas dos Alunos";
+    double mediaTurma = TempData["MediaTurma"] != null ? Convert.ToDouble(TempData["MediaTurma"]) : 0;
+}
+
+<h2>Notas dos Alunos</h2>
+
+@if (TempData["Mensagem"] != null)
+{
+    <div class="alert alert-warning">@TempData["Mensagem"]</div>
+}
+
+@if (TempData["MediaTurma"] != null)
+{
+    <div class="alert alert-info">
+        Média da Turma: <strong>@TempData["MediaTurma"]</strong>
+    </div>
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Aluno</th>
+            <th>DIC1</th>
+            <th>DIC2</th>
+            <th>DIC3</th>
+            <th>DIC4</th>
+            <th>DIC5</th>
+            <th>Presença (%)</th>
+            <th>Média</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var aluno in Model)
+        {
+            var mediaAluno = aluno.CalcularMedia();
+            string rowClass = "";
+
+            
+            if (aluno.PresencaPercentual < 75)
+            {
+                rowClass = "table-danger"; 
+            }
+            
+            else if (mediaAluno > mediaTurma)
+            {
+                rowClass = "table-success"; 
+            }
+
+            <tr class="@rowClass">
+                <td>@aluno.NomeAluno</td>
+                <td>@aluno.Dic1</td>
+                <td>@aluno.Dic2</td>
+                <td>@aluno.Dic3</td>
+                <td>@aluno.Dic4</td>
+                <td>@aluno.Dic5</td>
+                <td>@aluno.PresencaPercentual%</td>
+                <td><strong>@mediaAluno.ToString("F2")</strong></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create")" class="btn btn-primary">Lançar Notas</a>
+<a href="@Url.Action("CalcularMedias")" class="btn btn-success">Calcular Média da Turma</a>

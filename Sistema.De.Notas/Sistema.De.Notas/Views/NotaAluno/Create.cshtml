@@ -1,0 +1,46 @@
+﻿@model SistemaDeNotas.Data.NotaAluno
+
+@{
+    ViewData["Title"] = "Lançar Notas do Aluno";
+}
+
+<h2>Lançar Notas</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="NomeAluno">Nome do Aluno</label>
+        <input asp-for="NomeAluno" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dic1">Nota DIC1</label>
+        <input asp-for="Dic1" class="form-control" type="number" step="0.1" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dic2">Nota DIC2</label>
+        <input asp-for="Dic2" class="form-control" type="number" step="0.1" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dic3">Nota DIC3</label>
+        <input asp-for="Dic3" class="form-control" type="number" step="0.1" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dic4">Nota DIC4</label>
+        <input asp-for="Dic4" class="form-control" type="number" step="0.1" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Dic5">Nota DIC5</label>
+        <input asp-for="Dic5" class="form-control" type="number" step="0.1" required />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PresencaPercentual">Presença (%)</label>
+        <input asp-for="PresencaPercentual" class="form-control" type="number" step="0.1" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>
